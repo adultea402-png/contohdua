@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edeng Reload | Distributor Pulsa All Operator</title>
+<style>
+:root{--red:#e50914;--dark:#07090d;--black:#030405;--text:#f4f4f4;--muted:#b9bec8;--gold:#f5b400;}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6fa;color:#151922}
+a{text-decoration:none;color:inherit}
+.nav{height:80px;background:#05070a;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:sticky;top:0;z-index:20;border-bottom:1px solid #24272d}
+.brand{display:flex;align-items:center;gap:14px} .brand img{width:58px;height:58px;border-radius:50%;object-fit:cover}
+.brand b{font-size:25px;letter-spacing:1px} .brand b span{color:var(--red)} .brand small{display:block;color:#d0d0d0;margin-top:4px;font-size:10px}
+.menu{display:flex;gap:32px;font-size:13px;font-weight:bold} .menu a:hover,.menu a.active{color:#ff3a3a}
+.wa-top,.order-main{background:var(--red);color:white;padding:13px 20px;border-radius:8px;font-weight:bold;border:0;cursor:pointer}
+.hero{min-height:390px;background:radial-gradient(circle at 70% 45%,#4a0808 0,#150303 28%,#050609 65%);color:white;display:flex;align-items:center;padding:40px 8%;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 34px,rgba(255,0,0,.08) 35px 37px);pointer-events:none}
+.hero-text{max-width:600px;z-index:1} .eyebrow{color:#ff3b3b;font-weight:bold;letter-spacing:1px} h1{font-size:55px;margin:10px 0 12px;line-height:1} .hero p{font-size:18px;color:#d5d7db;line-height:1.6}
+.features{display:flex;gap:45px;margin-top:30px;flex-wrap:wrap} .feature{color:#ddd;font-size:14px} .feature strong{color:#ff2525;font-size:25px;margin-right:8px}
+.hero-logo{margin-left:auto;z-index:1} .hero-logo img{width:300px;height:300px;border-radius:50%;object-fit:cover;box-shadow:0 0 35px rgba(255,0,0,.4)}
+.products{padding:35px 4% 25px} .section-title{text-align:center;font-size:20px;font-weight:800;margin-bottom:20px} .section-title:after{content:"";display:block;width:55px;height:3px;background:var(--red);margin:7px auto}
+.grid{display:grid;grid-template-columns:1fr 1fr 1.7fr;gap:14px} .card{background:white;border:1px solid #dfe4ec;border-radius:10px;padding:14px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.card-title{font-weight:800;font-size:17px;margin:2px 0 14px} .pulse{color:#e50914} .pln{color:#d99a00} .ew{color:#1877c9}
+.table-wrap{overflow:auto} table{width:100%;border-collapse:collapse;font-size:12px} th{padding:8px;background:#111;color:white;text-align:center} td{padding:6px;text-align:center;border-bottom:1px solid #e8ebef} tr:hover{background:#fafafa}
+.order-btn{background:#147a35;color:white;border:0;border-radius:4px;padding:5px 10px;font-size:11px;cursor:pointer} .order-btn:hover{background:#0e5e28}
+.wallet-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px} .wallet-tab{padding:8px 11px;border:1px solid #d8dde5;background:#fff;border-radius:6px;font-weight:bold;cursor:pointer} .wallet-tab.active{background:#111;color:white;border-color:#111}
+.wallet-panel{display:none} .wallet-panel.active{display:block} .wallet-panel h3{margin:0 0 8px;color:#222}
+footer{background:#05070a;color:white;padding:25px 5%;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-features{display:flex;gap:35px;flex-wrap:wrap} .tg-top{background:#229ed9;color:white;padding:12px 16px;border-radius:6px;font-weight:bold} .tg-big{background:#229ed9;color:white;padding:18px 28px;border-radius:10px;font-weight:bold;font-size:18px} .footer-item{font-size:13px} .footer-item b{display:block;color:#ff3030;margin-bottom:4px} .wa-big{background:linear-gradient(90deg,#d80d0d,#f51a1a);padding:18px 28px;border-radius:10px;font-weight:bold;font-size:18px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr 1fr}.card.ewallet{grid-column:span 2}.menu{display:none}}
+@media(max-width:700px){.nav{padding:0 4%;height:70px}.brand b{font-size:18px}.wa-top{padding:10px;font-size:12px}.hero{padding:35px 6%;flex-direction:column;text-align:center}h1{font-size:40px}.features{justify-content:center;gap:18px}.hero-logo{margin:25px 0 0}.hero-logo img{width:220px;height:220px}.grid{grid-template-columns:1fr}.card.ewallet{grid-column:auto}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="brand"><img src="logo-edeng-reload.png" alt="Logo Edeng Reload"><div><b>EDENG <span>RELOAD</span></b><small>DISTRIBUTOR PULSA ALL OPERATOR</small></div></div>
+  <div class="menu"><a href="#beranda" class="active">BERANDA</a><a href="#harga">DAFTAR HARGA</a><a href="#cara">CARA ORDER</a><a href="#tentang">TENTANG KAMI</a></div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><a class="wa-top" href="https://wa.me/6285129288408" target="_blank">💬 WhatsApp</a><a class="tg-top" href="https://t.me/edengreload74" target="_blank">✈️ Telegram</a></div>
+</nav>
+
+<section class="hero" id="beranda">
+  <div class="hero-text">
+    <div class="eyebrow">EDENG RELOAD</div>
+    <h1>DAFTAR HARGA PRODUK</h1>
+    <p>Harga transparan, transaksi cepat, dan pelayanan terbaik untuk kebutuhan pulsa, token PLN, serta saldo e-wallet.</p>
+    <div class="features">
+      <div class="feature"><strong>◈</strong>Aman & Terpercaya</div>
+      <div class="feature"><strong>⚡</strong>Proses Cepat</div>
+      <div class="feature"><strong>◉</strong>Layanan 24 Jam</div>
+    </div>
+  </div>
+  <div class="hero-logo"><img src="logo-edeng-reload.png" alt="Logo besar Edeng Reload"></div>
+</section>
+
+<section class="products" id="harga">
+  <div class="section-title">PILIH PRODUK</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title pulse">📱 PULSA</div>
+      <div class="table-wrap"><table><thead><tr><th>Nominal</th><th>Harga</th><th>Pesan</th></tr></thead><tbody>
+        <tr data-product="Pulsa" data-nominal="5.000" data-harga="5.500">
+          <td>5.000</td><td>Rp 5.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="10.000" data-harga="10.500">
+          <td>10.000</td><td>Rp 10.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="15.000" data-harga="15.500">
+          <td>15.000</td><td>Rp 15.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="20.000" data-harga="20.500">
+          <td>20.000</td><td>Rp 20.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="25.000" data-harga="25.500">
+          <td>25.000</td><td>Rp 25.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="30.000" data-harga="30.500">
+          <td>30.000</td><td>Rp 30.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="35.000" data-harga="35.500">
+          <td>35.000</td><td>Rp 35.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="40.000" data-harga="40.500">
+          <td>40.000</td><td>Rp 40.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="45.000" data-harga="45.500">
+          <td>45.000</td><td>Rp 45.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="50.000" data-harga="50.500">
+          <td>50.000</td><td>Rp 50.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="55.000" data-harga="55.500">
+          <td>55.000</td><td>Rp 55.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="60.000" data-harga="60.500">
+          <td>60.000</td><td>Rp 60.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="65.000" data-harga="65.500">
+          <td>65.000</td><td>Rp 65.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="70.000" data-harga="70.500">
+          <td>70.000</td><td>Rp 70.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="75.000" data-harga="75.500">
+          <td>75.000</td><td>Rp 75.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="80.000" data-harga="80.500">
+          <td>80.000</td><td>Rp 80.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="85.000" data-harga="85.500">
+          <td>85.000</td><td>Rp 85.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="90.000" data-harga="90.500">
+          <td>90.000</td><td>Rp 90.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="95.000" data-harga="95.500">
+          <td>95.000</td><td>Rp 95.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr>
+
+        <tr data-product="Pulsa" data-nominal="100.000" data-harga="100.500">
+          <td>100.000</td><td>Rp 100.500</td>
+          <td><button class="order-btn">Pesan</button></td>
+        </tr></tbody></table></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title pln">⚡ TOKEN PLN</div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Kode</th><th>Harga</th><th>Keterangan</th><th>Pesan</th></tr></thead>
+        <tbody><tr data-product="Token PLN" data-nominal="PLNM5" data-harga="6.300" data-keterangan="PLN MURAH 5K">
+<td>PLNM5</td><td>Rp 6.300</td><td>PLN MURAH 5K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLNM10" data-harga="11.300" data-keterangan="PLN MURAH 10K">
+<td>PLNM10</td><td>Rp 11.300</td><td>PLN MURAH 10K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLNM15" data-harga="16.300" data-keterangan="PLN MURAH 15K">
+<td>PLNM15</td><td>Rp 16.300</td><td>PLN MURAH 15K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLNM25" data-harga="26.300" data-keterangan="PLN MURAH 25K">
+<td>PLNM25</td><td>Rp 26.300</td><td>PLN MURAH 25K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLNM50" data-harga="51.350" data-keterangan="PLN MURAH 50K">
+<td>PLNM50</td><td>Rp 51.350</td><td>PLN MURAH 50K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLN20" data-harga="21.650" data-keterangan="TOKEN PLN 20K">
+<td>PLN20</td><td>Rp 21.650</td><td>TOKEN PLN 20K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLN50" data-harga="51.600" data-keterangan="TOKEN PLN 50K">
+<td>PLN50</td><td>Rp 51.600</td><td>TOKEN PLN 50K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="Token PLN" data-nominal="PLN100" data-harga="101.450" data-keterangan="TOKEN PLN 100K">
+<td>PLN100</td><td>Rp 101.450</td><td>TOKEN PLN 100K</td>
+<td><button class="order-btn">Pesan</button></td></tr></tbody>
+      </table></div>
+    </div>
+
+    <div class="card ewallet">
+      <div class="card-title ew">👛 SALDO E-WALLET</div>
+      <div class="wallet-tabs">
+        <button class="wallet-tab active" data-target="wallet-0">GoPay</button><button class="wallet-tab " data-target="wallet-3">ShopeePay</button><button class="wallet-tab " data-target="wallet-4">LinkAja</button>
+      </div>
+      
+    <div class="wallet-panel active" id="wallet-0">
+      <h3>GoPay</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Kode</th><th>Harga</th><th>Keterangan</th><th>Pesan</th></tr></thead>
+        <tbody>
+<tr data-product="GoPay" data-nominal="GPY" data-harga="+175" data-keterangan="TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-25K">
+<td>GPY</td><td>+175</td><td>TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-25K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GPYF" data-harga="+500" data-keterangan="TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-75K">
+<td>GPYF</td><td>+500</td><td>TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-75K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GPYA" data-harga="+400" data-keterangan="TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-75K">
+<td>GPYA</td><td>+400</td><td>TOPUP SALDO GOPAY BEBAS DENOM QTY 10K-75K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC10" data-harga="10.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 10K">
+<td>GJKC10</td><td>Rp 10.175</td><td>TOPUP SALDO GOJEK CUSTOMER 10K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC11" data-harga="11.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 11K">
+<td>GJKC11</td><td>Rp 11.175</td><td>TOPUP SALDO GOJEK CUSTOMER 11K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC12" data-harga="12.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 12K">
+<td>GJKC12</td><td>Rp 12.175</td><td>TOPUP SALDO GOJEK CUSTOMER 12K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC14" data-harga="14.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 14K">
+<td>GJKC14</td><td>Rp 14.175</td><td>TOPUP SALDO GOJEK CUSTOMER 14K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC15" data-harga="15.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 15K">
+<td>GJKC15</td><td>Rp 15.175</td><td>TOPUP SALDO GOJEK CUSTOMER 15K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC16" data-harga="16.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 16K">
+<td>GJKC16</td><td>Rp 16.175</td><td>TOPUP SALDO GOJEK CUSTOMER 16K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC17" data-harga="17.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 17K">
+<td>GJKC17</td><td>Rp 17.175</td><td>TOPUP SALDO GOJEK CUSTOMER 17K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC18" data-harga="18.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 18K">
+<td>GJKC18</td><td>Rp 18.175</td><td>TOPUP SALDO GOJEK CUSTOMER 18K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC19" data-harga="19.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 19K">
+<td>GJKC19</td><td>Rp 19.175</td><td>TOPUP SALDO GOJEK CUSTOMER 19K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC20" data-harga="20.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 20K">
+<td>GJKC20</td><td>Rp 20.175</td><td>TOPUP SALDO GOJEK CUSTOMER 20K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC21" data-harga="21.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 21K">
+<td>GJKC21</td><td>Rp 21.175</td><td>TOPUP SALDO GOJEK CUSTOMER 21K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC22" data-harga="22.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 22K">
+<td>GJKC22</td><td>Rp 22.175</td><td>TOPUP SALDO GOJEK CUSTOMER 22K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC24" data-harga="24.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 24K">
+<td>GJKC24</td><td>Rp 24.175</td><td>TOPUP SALDO GOJEK CUSTOMER 24K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC25" data-harga="25.175" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 25K">
+<td>GJKC25</td><td>Rp 25.175</td><td>TOPUP SALDO GOJEK CUSTOMER 25K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC30" data-harga="30.400" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 30K">
+<td>GJKC30</td><td>Rp 30.400</td><td>TOPUP SALDO GOJEK CUSTOMER 30K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC40" data-harga="40.400" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 40K">
+<td>GJKC40</td><td>Rp 40.400</td><td>TOPUP SALDO GOJEK CUSTOMER 40K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC45" data-harga="45.400" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 45K">
+<td>GJKC45</td><td>Rp 45.400</td><td>TOPUP SALDO GOJEK CUSTOMER 45K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="GoPay" data-nominal="GJKC50" data-harga="50.400" data-keterangan="TOPUP SALDO GOJEK CUSTOMER 50K">
+<td>GJKC50</td><td>Rp 50.400</td><td>TOPUP SALDO GOJEK CUSTOMER 50K</td>
+<td><button class="order-btn">Pesan</button></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="wallet-panel " id="wallet-3">
+      <h3>ShopeePay</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Nominal</th><th>Harga</th><th>Pesan</th></tr></thead>
+        <tbody>
+<tr data-product="ShopeePay" data-nominal="SPY" data-harga="+60" data-keterangan="TOPUP SHOPEE BEBAS NOMINAL QTY 5.000-200.000"><td>SPY</td><td>++60</td><td>TOPUP SHOPEE BEBAS NOMINAL QTY 5.000-200.000</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP5" data-harga="5.060" data-keterangan="TOPUP SALDO SHOPEEPAY 5K"><td>SHP5</td><td>Rp 5.060</td><td>TOPUP SALDO SHOPEEPAY 5K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP10" data-harga="10.060" data-keterangan="TOPUP SALDO SHOPEEPAY 10K"><td>SHP10</td><td>Rp 10.060</td><td>TOPUP SALDO SHOPEEPAY 10K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP15" data-harga="15.060" data-keterangan="TOPUP SALDO SHOPEEPAY 15K"><td>SHP15</td><td>Rp 15.060</td><td>TOPUP SALDO SHOPEEPAY 15K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP20" data-harga="20.060" data-keterangan="TOPUP SALDO SHOPEEPAY 20K"><td>SHP20</td><td>Rp 20.060</td><td>TOPUP SALDO SHOPEEPAY 20K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP25" data-harga="25.060" data-keterangan="TOPUP SALDO SHOPEEPAY 25K"><td>SHP25</td><td>Rp 25.060</td><td>TOPUP SALDO SHOPEEPAY 25K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP30" data-harga="30.060" data-keterangan="TOPUP SALDO SHOPEEPAY 30K"><td>SHP30</td><td>Rp 30.060</td><td>TOPUP SALDO SHOPEEPAY 30K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP35" data-harga="35.060" data-keterangan="TOPUP SALDO SHOPEEPAY 35K"><td>SHP35</td><td>Rp 35.060</td><td>TOPUP SALDO SHOPEEPAY 35K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP40" data-harga="40.060" data-keterangan="TOPUP SALDO SHOPEEPAY 40K"><td>SHP40</td><td>Rp 40.060</td><td>TOPUP SALDO SHOPEEPAY 40K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP45" data-harga="45.060" data-keterangan="TOPUP SALDO SHOPEEPAY 45K"><td>SHP45</td><td>Rp 45.060</td><td>TOPUP SALDO SHOPEEPAY 45K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP50" data-harga="50.060" data-keterangan="TOPUP SALDO SHOPEEPAY 50K"><td>SHP50</td><td>Rp 50.060</td><td>TOPUP SALDO SHOPEEPAY 50K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP55" data-harga="55.060" data-keterangan="TOPUP SALDO SHOPEEPAY 55K"><td>SHP55</td><td>Rp 55.060</td><td>TOPUP SALDO SHOPEEPAY 55K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP60" data-harga="60.060" data-keterangan="TOPUP SALDO SHOPEEPAY 60K"><td>SHP60</td><td>Rp 60.060</td><td>TOPUP SALDO SHOPEEPAY 60K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP65" data-harga="65.060" data-keterangan="TOPUP SALDO SHOPEEPAY 65K"><td>SHP65</td><td>Rp 65.060</td><td>TOPUP SALDO SHOPEEPAY 65K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP70" data-harga="70.060" data-keterangan="TOPUP SALDO SHOPEEPAY 70K"><td>SHP70</td><td>Rp 70.060</td><td>TOPUP SALDO SHOPEEPAY 70K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP75" data-harga="75.060" data-keterangan="TOPUP SALDO SHOPEEPAY 75K"><td>SHP75</td><td>Rp 75.060</td><td>TOPUP SALDO SHOPEEPAY 75K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP80" data-harga="80.060" data-keterangan="TOPUP SALDO SHOPEEPAY 80K"><td>SHP80</td><td>Rp 80.060</td><td>TOPUP SALDO SHOPEEPAY 80K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP85" data-harga="85.060" data-keterangan="TOPUP SALDO SHOPEEPAY 85K"><td>SHP85</td><td>Rp 85.060</td><td>TOPUP SALDO SHOPEEPAY 85K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP90" data-harga="90.060" data-keterangan="TOPUP SALDO SHOPEEPAY 90K"><td>SHP90</td><td>Rp 90.060</td><td>TOPUP SALDO SHOPEEPAY 90K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP95" data-harga="95.060" data-keterangan="TOPUP SALDO SHOPEEPAY 95K"><td>SHP95</td><td>Rp 95.060</td><td>TOPUP SALDO SHOPEEPAY 95K</td><td><button class="order-btn">Pesan</button></td></tr>
+<tr data-product="ShopeePay" data-nominal="SHP100" data-harga="100.060" data-keterangan="TOPUP SALDO SHOPEEPAY 100K"><td>SHP100</td><td>Rp 100.060</td><td>TOPUP SALDO SHOPEEPAY 100K</td><td><button class="order-btn">Pesan</button></td></tr>
+</tbody>
+      </table></div>
+    </div>
+    <div class="wallet-panel " id="wallet-4">
+      <h3>LinkAja</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Kode</th><th>Harga</th><th>Keterangan</th><th>Pesan</th></tr></thead>
+        <tbody>
+        <tr data-product="LinkAja" data-nominal="LAP" data-harga="+120" data-keterangan="TOPUP LINKAJA BEBAS DENOM QTY 10K-200K">
+          <td>LAP</td><td>+120</td><td>TOPUP LINKAJA BEBAS DENOM QTY 10K-200K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA10" data-harga="10.120" data-keterangan="TOPUP LINKAJA NO ADMIN 10K">
+          <td>LA10</td><td>Rp 10.120</td><td>TOPUP LINKAJA NO ADMIN 10K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA15" data-harga="15.120" data-keterangan="TOPUP LINKAJA NO ADMIN 15K">
+          <td>LA15</td><td>Rp 15.120</td><td>TOPUP LINKAJA NO ADMIN 15K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA20" data-harga="20.120" data-keterangan="TOPUP LINKAJA NO ADMIN 20K">
+          <td>LA20</td><td>Rp 20.120</td><td>TOPUP LINKAJA NO ADMIN 20K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA25" data-harga="25.120" data-keterangan="TOPUP LINKAJA NO ADMIN 25K">
+          <td>LA25</td><td>Rp 25.120</td><td>TOPUP LINKAJA NO ADMIN 25K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA30" data-harga="30.120" data-keterangan="TOPUP LINKAJA NO ADMIN 30K">
+          <td>LA30</td><td>Rp 30.120</td><td>TOPUP LINKAJA NO ADMIN 30K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA35" data-harga="35.120" data-keterangan="TOPUP LINKAJA NO ADMIN 35K">
+          <td>LA35</td><td>Rp 35.120</td><td>TOPUP LINKAJA NO ADMIN 35K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA40" data-harga="40.120" data-keterangan="TOPUP LINKAJA NO ADMIN 40K">
+          <td>LA40</td><td>Rp 40.120</td><td>TOPUP LINKAJA NO ADMIN 40K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA50" data-harga="50.120" data-keterangan="TOPUP LINKAJA NO ADMIN 50K">
+          <td>LA50</td><td>Rp 50.120</td><td>TOPUP LINKAJA NO ADMIN 50K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA60" data-harga="60.120" data-keterangan="TOPUP LINKAJA NO ADMIN 60K">
+          <td>LA60</td><td>Rp 60.120</td><td>TOPUP LINKAJA NO ADMIN 60K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA70" data-harga="70.120" data-keterangan="TOPUP LINKAJA NO ADMIN 70K">
+          <td>LA70</td><td>Rp 70.120</td><td>TOPUP LINKAJA NO ADMIN 70K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA75" data-harga="75.120" data-keterangan="TOPUP LINKAJA NO ADMIN 75K">
+          <td>LA75</td><td>Rp 75.120</td><td>TOPUP LINKAJA NO ADMIN 75K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA80" data-harga="80.120" data-keterangan="TOPUP LINKAJA NO ADMIN 80K">
+          <td>LA80</td><td>Rp 80.120</td><td>TOPUP LINKAJA NO ADMIN 80K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA85" data-harga="85.120" data-keterangan="TOPUP LINKAJA NO ADMIN 85K">
+          <td>LA85</td><td>Rp 85.120</td><td>TOPUP LINKAJA NO ADMIN 85K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA90" data-harga="90.120" data-keterangan="TOPUP LINKAJA NO ADMIN 90K">
+          <td>LA90</td><td>Rp 90.120</td><td>TOPUP LINKAJA NO ADMIN 90K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA95" data-harga="95.120" data-keterangan="TOPUP LINKAJA NO ADMIN 95K">
+          <td>LA95</td><td>Rp 95.120</td><td>TOPUP LINKAJA NO ADMIN 95K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA100" data-harga="100.120" data-keterangan="TOPUP LINKAJA NO ADMIN 100K">
+          <td>LA100</td><td>Rp 100.120</td><td>TOPUP LINKAJA NO ADMIN 100K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA150" data-harga="150.120" data-keterangan="TOPUP LINKAJA NO ADMIN 150K">
+          <td>LA150</td><td>Rp 150.120</td><td>TOPUP LINKAJA NO ADMIN 150K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        <tr data-product="LinkAja" data-nominal="LA200" data-harga="200.120" data-keterangan="TOPUP LINKAJA NO ADMIN 200K">
+          <td>LA200</td><td>Rp 200.120</td><td>TOPUP LINKAJA NO ADMIN 200K</td>
+          <td><button class="order-btn">Pesan</button></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="cara" style="padding:35px 7%;background:#fff;text-align:center">
+  <h2>Cara Order</h2>
+  <p>Pilih produk → Klik tombol Pesan → WhatsApp terbuka otomatis dengan detail pesanan.</p>
+</section>
+
+<section id="tentang" style="padding:35px 7%;background:#f0f2f6;text-align:center">
+  <h2>Tentang Edeng Reload</h2>
+  <p>Edeng Reload menyediakan layanan produk digital dengan proses mudah dan cepat.</p>
+</section>
+
+<footer>
+  <div class="footer-features">
+    <div class="footer-item"><b>🛡 AMAN & TERPERCAYA</b>Transaksi aman dan terpercaya</div>
+    <div class="footer-item"><b>⚡ PROSES CEPAT</b>Diproses secepat mungkin</div>
+    <div class="footer-item"><b>🎧 LAYANAN 24 JAM</b>Kami siap melayani kapan saja</div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="wa-big" href="https://wa.me/6285129288408" target="_blank">💬 Order via WhatsApp<br>6285129288408</a><a class="tg-big" href="https://t.me/edengreload74" target="_blank">✈️ Hubungi Telegram<br>@edengreload74</a></div>
+</footer>
+
+<script>
+const wa = "6285129288408";
+document.querySelectorAll(".order-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const row = btn.closest("tr");
+    const product = row.dataset.product;
+    const nominal = row.dataset.nominal;
+    const harga = row.dataset.harga;
+    const keterangan = row.dataset.keterangan || "";
+    const detail = keterangan ? `%0AKeterangan: ${keterangan}` : "";
+    const label = keterangan ? "Kode" : "Nominal";
+    const msg = `Halo Edeng Reload, saya ingin memesan:%0A%0AProduk: ${product}%0A${label}: ${nominal}${detail}%0AHarga: Rp ${harga}%0A%0ATerima kasih.`;
+    window.open(`https://wa.me/${wa}?text=${msg}`, "_blank");
+  });
+});
+document.querySelectorAll(".wallet-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".wallet-tab").forEach(x => x.classList.remove("active"));
+    document.querySelectorAll(".wallet-panel").forEach(x => x.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.target).classList.add("active");
+  });
+});
+</script>
+</body></html>
